@@ -6,6 +6,12 @@ Learn more about [Remix Stacks](https://remix.run/stacks).
 
     npx create-remix --template epeterson320/bebop-stack
 
+## 🔑 Motivation
+
+The main idea behind the authorization model (and the starting data model) is that nearly every B2B app has _organizations_ which in turn have _resources_. For example, Github orgs have repos, Slack orgs have channels, Office 365 orgs have all sorts of documents and spreadsheets, Figma orgs have graphics files, and the list goes on. In every case, if you create a resource within your org, you own it and control its permissions, with the exception that your organization's admins can access all resources within the org. App admins (i.e. customer support agents for the SaaS) can access resources across any organization.
+
+That authorization model is what you get out of the box, powered by [Oso](https://www.osohq.com/), and the rules can be modified and expanded by editing the **.polar** files inside **auth/**. See their docs for help. If you don't know much about authorization, prepare to have your mind blown.
+
 ## 🎁 What's in the stack
 
 * Bulletproof authentication with [Auth0](https://auth0.com/).
@@ -17,8 +23,9 @@ Learn more about [Remix Stacks](https://remix.run/stacks).
 * Code formatting with [Prettier](https://prettier.io).
 * Git hooks with [Husky](https://typicode.github.io/husky/#/).
 * UI kit with [MUI](https://mui.com/).
-* No default deployment, because you probably have opinions, but the app is Dockerized
 * Typescript, with [Typescript](https://www.typescriptlang.org/).
+
+You know your own situation better than I do, so if you want to change some of this stack, feel free to fork this and then `npx create-remix --template your/repo` for the win.
 
 ## 🚫 What's not in the stack
 
@@ -26,12 +33,12 @@ Learn more about [Remix Stacks](https://remix.run/stacks).
 * Storybook
 * Breejs, queues, or anything in the background
 * Cypress
+* Deployment, because you probably have opinions, but the app is Dockerized.
 
-## Authorization
+## Develoment
 
-The main idea behind the authorization model (and the starting data model) is that nearly every B2B app has _organizations_ which in turn have _resources_. For example, Github orgs have repos, Slack orgs have channels, Office 365 orgs have all sorts of documents and spreadsheets, Figma orgs have graphics files, and the list goes on. In every case, if you create a resource within your org, you own it and control its permissions, with the exception that your organization's admins can access all resources within the org. App admins (i.e. customer support agents for the SaaS) can access resources across any organization.
-
-That authorization model is what you get out of the box, powered by [Oso](https://www.osohq.com/), and the rules can be modified and expanded by editing the **.polar** files inside **auth/**. See their docs for help. If you don't know much about authorization, prepare to have your mind blown.
+* `npm run dev` runs the app.
+* `npm run db:push` resets the database to the schema snapshot and seeds it.
 
 ## FAQ
 
