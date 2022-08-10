@@ -60,7 +60,7 @@ I don't care about bundle size. Hopefully we can still be friends.
 
 ## Known Issues
 
-I haven't written any of the code yet, so there's that.
+[I haven't written any of the code yet](https://github.com/epeterson320/bebop-stack/issues/1), so there's that.
 
 ## Contributing
 
